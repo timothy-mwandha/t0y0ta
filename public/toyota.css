@@ -1,0 +1,188 @@
+#con
+{
+background-color: rgb(255,224,193);
+width: 650px;
+height: auto;
+align-self: 0 auto;
+margin-top: 45px;
+font-size: small;
+border: 2px solid rgb(236, 215, 215);
+
+}
+
+#toprow
+{
+height: auto;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 15px;
+margin-top: 15px;
+}
+
+#middlerow
+{
+    
+    height: auto;
+    margin: 5px;
+}
+#bottomrow
+{
+    background-color: rgb(255,224,193);
+    height: auto;
+    padding-top: 15px;
+    
+}
+#trlhs
+{
+    background-color: rgb(255,191,130);
+    padding: 2px;
+}
+#trrhs
+{
+    background-color: rgb(255,191,130);
+    padding: 2px;
+     
+}
+
+#mrlhs
+{
+    background-color: rgb(255,191,130);
+    padding: 2px;
+}
+
+#mrrhs
+{
+    background-color: rgb(255,191,130);
+    padding: 2px;
+    margin-left: 0px;
+}
+
+#brrhs
+{
+    padding-right: 30px;
+    height: 65px;
+    
+    
+}
+
+#brlhs
+{
+    
+    height: 65px;
+    padding-left: 30px;
+    
+
+}
+
+#feg, #fea
+{
+margin-left: 30px;
+
+}
+
+#city
+{
+    width: 60px;
+    margin-left: 20px;
+}
+
+#custID
+{
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#nam
+{
+ width: 100%;
+ margin-left: 20px;  
+}
+
+#ret
+{
+ margin-left: -85px;   
+}
+
+#labrc
+{
+    margin-left: -70px;   
+}
+
+#usp, #fea
+{
+margin-top: 23px;
+
+}
+
+#pric
+{
+    width: 50px;
+    margin-left: 20px;
+    text-align: right;
+}
+
+#quan
+{
+    width: 50px;
+    margin-left: -35px;
+    text-align: right;
+    
+}
+
+#labquan
+{
+    width: 40px;
+    margin-left: -90px;
+    
+}
+
+#part  
+{
+    margin-left: 20px;
+    width: 100%;
+}
+
+#desc 
+{
+    margin-left: 20px;
+    width: 100%;
+
+}
+
+#labpart  #labpric
+{
+ width: 120px;
+
+}
+
+#ex
+{
+    float: right;
+    
+    
+}
+
+#ovsiz
+{
+    margin-left: 60px;
+}
+
+#labovcon  
+{
+margin-left: 20px;
+
+}
+
+#sata, #cos, #ship, #tot
+{
+    text-align: right;
+}
+
+.login-form input[type="button"] {
+    width: 150%;
+    padding: 15px;
+    border: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #ffffff;
+  }

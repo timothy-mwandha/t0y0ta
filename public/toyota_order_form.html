@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"  type="text/css" href="toyota.css">
+    <title>Mail Order Form</title>
+</head>
+<body>
+    <div class="container" id="con">
+        <form action="#" method="POST" onsubmit="return validData()" > 
+        <div class="row" id="toprow">
+            <div class="col-lg-6" id="trlhs">
+               <fieldset class="border p-2">
+                <legend class="w-auto"><small>Customer Information</small></legend>
+               <table>
+                   
+                   <tbody>
+                   <tr>
+                        <td><label for="custID">Customer ID:</label></td>
+                        <td><input type="text" id="custID" name="customID" pattern="^\S+$" autofocus></td>
+                   </tr>
+
+                    <tr>
+                        <td><label for="nam">Name:</label></td>
+                        <td><input type="text" id="nam" name="name"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="city">City:</label></td>
+                         <td>
+                            <select id="city" name="city">
+                            
+                            <option selected="" value="default">(City)</option>
+                            <option value="KLA">KLA</option>
+                            <option value="EBB">EBB</option>
+                            <option value="MBR">MBR</option>
+                            <option value="OTH">OTH</option>
+                           
+                            </select></td>
+
+
+                        <td><input type="checkbox" id="ret" name="retcus" checked></td>
+                        <td><label for="ret" id="labrc">Retail Customer</label></td>
+                        
+                    </tr>
+                    
+                    </tbody>
+                </table>
+            </fieldset>
+            </div>
+
+            <div class="col-lg-6 " id="trrhs">
+                <fieldset class="border p-2">
+                <legend><small>Shipping</small></legend>
+                <table>
+                
+                <tbody>
+                    <div class="form-group">
+                    <tr>
+                        <td><label><input id="up" name="courier" type="radio" value="UPS" checked>UPS:</label></td>
+                        <td><label><input id="feg" name="courier"  type="radio" value="FEGR">Fed Ex Ground:</label></td>
+                    </tr>
+                    </div>
+                    <div class="form-group">
+                    <tr>
+                        <td><label><input id="usp"  name="courier" type="radio" value="USPA">US Postal Air:</label></td>
+                        <td><label><input id="fea" name="courier" type="radio" value="FEAR">Fed Ex Air:</label></td>
+                    </tr>
+                    </div>
+                </tbody>
+                </table>
+            </fieldset>
+            </div>
+
+        </div>
+        
+        <div class="row" id="middlerow">
+            <div class="col-lg-6" id="mrlhs">
+                <fieldset class="border p-2">
+                <legend><small>Part Ordered</small></legend>
+                <table>
+                        <tbody>
+                        <tr>
+                            <td><label for="part" id="labpart">Part Number:</label></td>
+                            <td><input type="text" id="part" name="partno"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="desc">Description:</label></td>
+                            <td><input type="text" id="desc" name="descr"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="pric" id="labpric">Price per part:</label></Td>
+                            <td><input type="number"  min="0" oninput="validity.valid||(value='')" id="pric" name="prce"></td>
+                       
+                               
+                            <td><label for="quan" id="labquan">Quantity:</label></td>
+                            <td><input type="number"  min="0" oninput="validity.valid||(value='')" id="quan" name="quant"></td>
+                        </tr>
+                
+                        <tr>
+                            <td><input type="checkbox" id="ovsiz" name="ovsizecont"></td>
+                            <td><label id="labovcon" for="ovsiz">Over sized container?</label></td>
+                        </tr>
+     
+                    </tbody>
+                </table>
+            </fieldset>
+            </div>
+        
+            <div class="col-lg-6" id="mrrhs">
+                <fieldset class="border p-2">
+                <legend><small>Output</small></legend>
+                <table>
+                   
+                    <tbody>
+                        <tr>
+                            <td><label for="cos">Cost:</label></td>
+                            <td><input type="text" id="cos" name="coast" disabled></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="sata">Sales Tax:</label></td>
+                            <td><input type="text" id="sata" name="saltax" disabled></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="ship">Shipping & Handling:</label></td>
+                            <td><input type="text" id="ship" name="shipping"disabled></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="tot">Total:</label></td>
+                            <td><input type="text" id="tot" name="total" disabled></td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </fieldset>
+            </div>
+            
+        </div>
+        
+        <div class="row" id="bottomrow">
+            <div class="col-lg-6 btn-group-lg" id="brlhs">
+                <button type="submit" id="buco" class="btn-default">Compute</button>
+                <button type="reset" id="neor" class="btn-default">New Order</button>
+            </div>
+            
+            <div class="col-lg-6 btn-group-xl" id="brrhs">
+                <button type="button" id="ex" onclick="closewindow()">Exit</button>
+            </div>
+            
+        </div>
+        </form>
+        <div> <small> (c) CIU Timothy Wampa Mwandha</small>   </div>
+    </div>
+    <script type="text/javascript" src="toyotaval.js"></script>
+</body>
+</html>
