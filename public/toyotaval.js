@@ -30,11 +30,9 @@ var validData = () => {
   var sata = document.getElementById('sata');
   var satax = parseFloat(sata.value);
   var ship = document.getElementById('ship');
-  var shipamt = parseFloat(ship.value);
   var tot = document.getElementById('tot');
   var toto = parseFloat(tot.value);
-  
-
+  var shipamt
   
   /**   the conditional statements check IF the data validation rules have been broken,
    * and gives the user feedback to enter the correct data. Else the program continues 
@@ -117,7 +115,7 @@ var validData = () => {
       
     }
     
-
+    
 
 //validating that the data entered into the quantity element in a number > 0.
  
@@ -170,9 +168,10 @@ cos.value = cost.toFixed(2);
  * quantity of parts with shipping charge. For oversized orders, $5 is added. */
 
  
-      let kuria = getElementsByName('courier');
+      let kuria = document.getElementsByName('courier');
 /** we first check whether container over size checkbox is checked, by making the 
  * checked option an argument of the IF conditional statement. Else has no argument.*/
+
 
       if (ovsiz.checked) 
       {
@@ -180,7 +179,7 @@ cos.value = cost.toFixed(2);
                     if(kuria.item(i).checked){
        
                             if(kuria.item(i).value =='UPS'){
-                                shipamt = (qty * 7.00) + 5.00;
+                                shipamt = qty * (7.00 + 5.00);
                                 ship.value = shipamt.toFixed(2);
                                   break;
 
@@ -188,19 +187,19 @@ cos.value = cost.toFixed(2);
                                   
                             }
                             else if(kuria.item(i).value =='USPA'){
-                                shipamt = (qty * 9.25) + 5.00;
+                                shipamt = qty * (9.25 + 5.00);
                                 ship.value = shipamt.toFixed(2);
                                   break;
 
        
                             }
                             else if(kuria.item(i).value =='FEGR'){
-                                shipamt = (qty *8.50) + 5.00;
+                                shipamt = qty * (8.50 + 5.00);
                                 ship.value = shipamt.toFixed(2);
                                   break;
                             }
                             else{
-                                shipamt = (qty * 12.00) + 5.00;
+                                shipamt = qty * (12.00 + 5.00);
                                 ship.value = shipamt.toFixed(2);
                                   break;
                             }
@@ -215,6 +214,8 @@ cos.value = cost.toFixed(2);
       } 
       else {
             for(let i=0;i<kuria.length;i++){
+
+              
                 if(kuria.item(i).checked){
 
                     if(kuria.item(i).value =='UPS'){
