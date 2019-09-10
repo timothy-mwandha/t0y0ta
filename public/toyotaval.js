@@ -160,12 +160,13 @@ cos.value = cost.toFixed(2);
         sata.value = satax.toFixed(2);
       }
       else{
+        satax = cost * 0;
         sata.value = 0
       }
 
 
 /** depending on the shipping courier checked, shipping is calculated, by multipling 
- * quantity of parts with shipping charge. For oversized orders, $5 is added. */
+ * quantity of parts with shipping charge. For oversized orders, $5 is added per part. */
 
  
       let kuria = document.getElementsByName('courier');
@@ -250,7 +251,7 @@ cos.value = cost.toFixed(2);
 /** Total invoice amount = COST + SALES TAX + SHIPPING */
 
 
-    toto = cost + satax; //+ shipamt
+    toto = cost + satax + shipamt; 
     tot.value= toto.toFixed(2);
 
   
